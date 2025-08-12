@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Yadav - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* About Section */
+#about p {
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.project-card h3 {
+  color: #ffdf6c;
+  margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: linear-gradient(135deg, #ff512f, #f09819);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact a {
+  color: #ffdf6c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+  color: #ddd;
+}
+</style>
+</head>
+<body>
+ 
+  <header>
+   <img src="/image.jpg.jpg" height="100" alt="Deepak image">
+    <div class="container">
+      <h1>Deepak Yadav</h1>
+      <p>Frontend Developer </p>
+     
+    </div>
+    
+  </header>
+   
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Deepak Yadav. I design and build modern, responsive websites and applications.
+      I have a passion for creating clean user interfaces and smooth user experiences.
+    </p>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="/image.png" width="100" alt="zomato image">
+        <h3>Project Zomato</h3>
+        <a href="/ZOMATO\Zomato/INDEX.HTML">Click here to visit </a>
+      </div>
+     
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    
+      
+    </ul>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:www.dipakyadav21@gmail.com">www.dipakyada21@gmail.com</a></p>
+
+    <p>LinkedIn: <a href="#" target="deepakyadavlinkdn@gmail.com">deepakyadavlinkdn@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Deepak Yadav. All rights reserved.</p>
+  </footer>
+</body>
+</html>
