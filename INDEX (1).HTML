@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zomato Food Clone</title>
+  <link rel="stylesheet" href="style.css"><STYle>/* Reset and Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #e23744; /* Zomato red */
+  color: #fff;
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd1d6;
+}
+
+.login-btn {
+  background-color: #fff;
+  color: #e23744;
+  padding: 6px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #ffd1d6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-box button {
+  background-color: #e23744;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #b32c37;
+}
+
+/* Restaurants Section */
+.restaurants-section h2 {
+  text-align: center;
+  margin: 50px 0 20px;
+  color: #e23744;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.restaurant-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.restaurant-card h3 {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #e23744;
+}
+
+.restaurant-card p {
+  padding: 0 10px 15px;
+  font-size: 0.9rem;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Offers Section */
+.offers-section {
+  background-color: #fff5f5;
+  padding: 50px 0;
+}
+
+.offers-section h2 {
+  text-align: center;
+  color: #e23744;
+  margin-bottom: 30px;
+}
+
+.offer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.offer-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.offer-card h3 {
+  color: #e23744;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #e23744;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contact-section a {
+  color: #e23744;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #e23744;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+</STYle>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Zomato</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#" class="login-btn">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Discover the best food & drinks in your city</h1>
+      <p>Order your favourite meals from top-rated restaurants near you.</p>
+      <form class="search-box">
+        <input type="text" placeholder="Search for restaurant, cuisine or dish">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Featured Restaurants -->
+  <section id="restaurants" class="restaurants-section">
+    <div class="container">
+      <h2>Popular Restaurants</h2>
+      <div class="restaurant-grid">
+        <div class="restaurant-card">
+          
+          <h3>Biryani Palace</h3>
+          <p>₹200 per person • Indian, Mughlai</p>
+        </div>
+        <div class="restaurant-card">
+        
+          <h3>Pizza Mania</h3>
+          <p>₹300 per person • Italian, Fast Food</p>
+        </div>
+        <div class="restaurant-card">
+          
+          <h3>Sushi World</h3>
+          <p>₹500 per person • Japanese, Seafood</p>
+        </div>
+        <div class="restaurant-card">
+          
+          <h3>Chai Adda</h3>
+          <p>₹150 per person • Beverages, Snacks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers Section -->
+  <section id="offers" class="offers-section">
+    <div class="container">
+      <h2>Special Offers</h2>
+      <div class="offer-cards">
+        <div class="offer-card">
+          <h3>50% Off</h3>
+          <p>On first order with Zomato Gold</p>
+        </div>
+        <div class="offer-card">
+          <h3>Free Delivery</h3>
+          <p>On orders above ₹500</p>
+        </div>
+        <div class="offer-card">
+          <h3>Buy 1 Get 1</h3>
+          <p>On selected pizzas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="www.dipakyadav21@gmail.com">www.dipakyadav21@gmail.com</a></p>
+      <p>Phone: +91 9569979087</p>
+      <p>Address: Zomato Etawah, India</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Zomato Clone. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
